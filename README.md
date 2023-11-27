@@ -53,7 +53,28 @@ nmap 192.239.69.3 -p 22 -sV -O
 <br />
 <br />
 <br />
-
+Utilize Hydra (Linux tool) to perform a dictionary attack on the target SSH server: <br/>
+<br/>
+- Hydra is a brute-forcing tool that helps penetration testers and ethical hackers crack the passwords of network services. Hydra can perform rapid dictionary attacks against more than 50 protocols. This includes telnet, SSH, FTP, HTTP, HTTPS, SMB, databases, and several other services.
+<br/>
+- Below, we can see that I used the Hydra tool to see if I could successfully find a password for a user named "student".
+<br/>
+- From the results, it looks like the Hydra tool was able to successfully find a valid password for the user "student" by using the rockyou wordlist.
+<br/>
+<br/>
+Commands: gzip -d /usr/share/wordlists/rockyou.txt.gz
+<br/>
+hydra -l student -P /usr/share/wordlists/rockyou.txt 192.239.69.3 ssh
+<br/>
+<br/>
+<img src="https://i.imgur.com/2BTukDQ.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
