@@ -1,1 +1,60 @@
-# SSH-DictionaryAttack
+<h1>SSH Dictionary Attack</h1>
+
+
+<h2>Description</h2>
+This project consists of using nmap, hydra, & msfconsole as Linux tools to perfrom dictionary attacks on a targeted SSH server. 
+<br />
+<br />
+<br />
+
+Disclaimer: The Kali Linux user machine and target machine used in this project was provided to me by INE for educational purposes. The misuse of the information in this project lab can result in criminal charges brought against the individual/individuals in question.
+<br />
+
+
+<h2>Languages and Utilities Used</h2>
+
+- <b>nmap</b>
+- <b>hydra</b>
+- <b>msfconsole</b>
+
+
+<h2>Environments Used </h2>
+
+- <b>Kali Linux</b>
+
+<h2>Project walk-through:</h2>
+
+<p align="left">
+Ping target machine to verify that it is active, then run nmap scan to look for open tcp ports: <br/>
+<br/>
+- INE has provided me with Kali Linux GUI & target machine (target machine is one ip address above from mine).  I will run an ip a command to verify my own ip address. Then, I'll run a ping command to verify the target ip address is active.
+<br/>
+- Once I can verify that the target machine is active, I will run nmap scan to look for open tcp ports and try to obtain port information. 
+<br/>
+- Down below, we can see that port 22 (SSH) is open and its version is OpenSSH (Ubuntu Linux), which tells us that it is running Linux.
+<br/>
+<br/>
+Commands: ip a
+<br/>
+ping 192.239.69.3
+<br/>
+nmap 192.239.69.3
+<br/>
+nmap 192.239.69.3 -p 22 -sV -O
+<br/>
+<br/>
+<img src="https://i.imgur.com/WAHtHYv.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<img src="https://i.imgur.com/7f8KtmC.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+</p>
