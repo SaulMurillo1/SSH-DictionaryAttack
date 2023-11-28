@@ -75,6 +75,22 @@ hydra -l student -P /usr/share/wordlists/rockyou.txt 192.239.69.3 ssh
 <br />
 <br />
 <br />
+Now that we have a valid password for the user "student", test an SSH log in: <br/>
+<br/>
+- We can see that I was able to successfully log into the SSH server, however it looks like the "student" user cannot really do much in regards with user permissions. 
+<br/>
+<br/>
+Command: ssh student@192.239.69.3
+<br/>
+<br/>
+<img src="https://i.imgur.com/NkUnaRy.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
