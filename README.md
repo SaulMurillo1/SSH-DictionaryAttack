@@ -143,6 +143,26 @@ exploit
 <br />
 <br />
 <br />
+Now that we have found a valid password for user "root", verify that a login to the user is possible: <br/>
+<br/>
+- We can see that I was able to successfully log into the user root.  It also looks like I was able to enumerate (list) many directories as well.
+<br/>
+<br/>
+Commands: ssh root@192.239.69.3
+<br/>
+whoami
+<br/>
+ls /
+<br/>
+<br/>
+<img src="https://i.imgur.com/pfWGmGV.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
